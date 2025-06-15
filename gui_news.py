@@ -35,7 +35,6 @@ class PostoDiBlocco(QWidget):
         #veicolo
         self.veicolo_scroll = QScrollArea()
         self.veicolo_scroll.setWidgetResizable(True)
-        
         self.veicolo_tab =QWidget()
         self.veicolo_tab.setObjectName("Tab")
         self.veicolo_scroll.setWidget(self.veicolo_tab)
@@ -45,7 +44,6 @@ class PostoDiBlocco(QWidget):
 
 
         self.tab_bar.addTab(self.persona_tab, "Persona")
-        #self.tab_bar.addTab(self.veicolo_tab, "Veicolo")
         self.tab_bar.addTab(self.veicolo_scroll,"Veicolo")
         self.tab_bar.addTab(self.velocità_tab, "Velocità")
 
@@ -137,7 +135,6 @@ class PostoDiBlocco(QWidget):
         art115_15 = QCheckBox("Minore autorizzato alla guida accompagnata senza avere l'accompagnatore al fianco")
         art115_15.setProperty("Ipotesi", "115-15")
         self.patente_requisiti_checkboxes.append(art115_15)
-        #art115_16 = QCheckBox("Esercitazione in autostrada di minore autorizzato alla guida accompagnata")
 
         patente_requisiti.addWidget(patente_art115)
         patente_requisiti.addWidget(art115_04)
@@ -150,11 +147,6 @@ class PostoDiBlocco(QWidget):
         patente_requisiti.addWidget(art115_13)
         patente_requisiti.addWidget(art115_14)
         patente_requisiti.addWidget(art115_15)
-        # patente_requisiti.addWidget(art115_16)
-        
-        # STATO della PERSONA
-        tab_stato_persona_layout = QLabel("Stato della Persona")
-        tab_stato_persona_layout.setObjectName("intestazione2")
 
         # Aggiungi bottone 
         tab_persona_botton = QPushButton("Aggiorna Dati Persona")
@@ -168,10 +160,6 @@ class PostoDiBlocco(QWidget):
         self.persona_tab.layout().addSpacing(5)
         self.persona_tab.layout().addLayout(patente_requisiti)
         self.persona_tab.layout().addStretch(1)
-        self.persona_tab.layout().addWidget(tab_stato_persona_layout)
-        self.persona_tab.layout().addSpacing(5)
-        #self.persona_tab.layout().addLayout(box_etilometro)
-        self.persona_tab.layout().addSpacing(10)
         self.persona_tab.layout().addStretch(1)
         self.persona_tab.layout().addWidget(tab_persona_botton, alignment=Qt.AlignmentFlag.AlignRight| Qt.AlignmentFlag.AlignBottom)
 
@@ -311,7 +299,6 @@ class PostoDiBlocco(QWidget):
         art100_10 = QCheckBox("Veicolo avente targa non propria o contraffatta - Reiterazione")
         art100_10.setProperty("Ipotesi", "100-10")
         self.veicoli_checkboxes.append(art100_10)
-        #art100_11 = QCheckBox("Falsificazione, alterazione, manomissione di targhe")
         
         art100_12 = QCheckBox("Uso di targa falsa, manomessa o alterata")
         art100_12.setProperty("Ipotesi", "100-12")
@@ -340,7 +327,6 @@ class PostoDiBlocco(QWidget):
         targhe.addWidget(art100_08)
         targhe.addWidget(art100_09)
         targhe.addWidget(art100_10)
-        #targhe.addWidget(art100_11)
         targhe.addWidget(art100_12)
         targhe.addWidget(art100_13)
         targhe.addWidget(art102_02)
