@@ -1,6 +1,6 @@
 # cds_prova
 
-Realizzato un progetto per apprendere i principali componenti della libreria PyQt6. 
+Ho realizzato un progetto per apprendere i principali componenti della libreria PyQt6. 
 
 Il file gui_new.py contiene il codice necessario per l'interfaccia grafica, mentre il file art_cds_new.py è un dizionario con al suo interno solo alcuni codici del cds. 
 
